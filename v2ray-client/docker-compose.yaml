@@ -1,0 +1,12 @@
+version: '3'
+  
+services:
+  v2ray:
+    container_name: v2ray
+    image: teddysun/v2ray 
+    restart: always
+    ports:
+      - "40808:10808"
+      - "40809:10809"
+    volumes:
+      - /etc/v2ray:/etc/v2ray
