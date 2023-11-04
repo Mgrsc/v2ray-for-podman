@@ -3,6 +3,23 @@ from pathlib import Path
 import json
 import uuid
 
+# Get the domain name from the user
+domain = input("Please enter the domain name you want to use: ")
+
+# Read the content of the Caddyfile
+caddyfile_path = Path("caddy/Caddyfile")
+with caddyfile_path.open() as file:
+    caddyfile_content = file.read()
+
+# Replace "<your domain name>" with the user's input domain
+modified_caddyfile_content = caddyfile_content.replace("<your domain name>", domain)
+
+# Write the modified content back to the Caddyfile
+with caddyfile_path.open(mode="w") as file:
+    file.write(modified_caddyfile_content)
+
+print("Caddyfile has been successfully modified!")
+
 # Get the path of the configuration file
 path = Path(__file__).parent.joinpath('v2ray/config/config.json')
 # Open the configuration file
