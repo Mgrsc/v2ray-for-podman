@@ -23,13 +23,11 @@ Here is the complete step-by-step guide to set up V2Ray + Caddy (Web server) + C
 
 2. Run the `./bbr.sh` script to accelerate your server's network.
 
-3. Execute the `./setup.py` script to generate a UUID. You can use the following command:
+3. Execute the `./setup.py` script to generate a UUID and input your domain. You can use the following command:
 
    ```shell
    ./setup.py
    ```
-
-4. Replace `<EXAMPLE.COM>` with your domain/subdomain in the `caddy/Caddyfile` file.
 
 5. Run the `./deploy.sh` script to deploy V2Ray, Caddy, and CDN. Use the following command:
 
