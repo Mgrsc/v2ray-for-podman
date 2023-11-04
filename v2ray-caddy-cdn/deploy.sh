@@ -1,5 +1,6 @@
 #!/bin/bash
-
+mkdir $(pwd)/caddy/{data,config}
+mkdir $(pwd)/v2ray/logs
 podman run -d --net host --volume "$(pwd)/caddy/Caddyfile:/etc/caddy/Caddyfile" \
   --volume "$(pwd)/caddy/web/:/usr/share/caddy" \
   --volume "$(pwd)/caddy/data/:/data/caddy/" \
